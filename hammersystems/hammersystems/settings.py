@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 from dotenv import load_dotenv
+import django_heroku
 
 load_dotenv()
 
@@ -164,3 +165,6 @@ AUTH_USER_MODEL = 'users.User'
 SMS_BACKEND = 'sms.backends.filebased.SmsBackend'
 SMS_FILE_PATH = os.path.join(BASE_DIR, 'sent_sms')
 DEFAULT_FROM_SMS = '+12345678900'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
