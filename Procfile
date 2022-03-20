@@ -1,0 +1,1 @@
+worker: python hammersystems/manage.py runserver
