@@ -1,1 +1,1 @@
-worker: python hammersystems/manage.py runserver
+web: gunicorn hammersystems.wsgi
