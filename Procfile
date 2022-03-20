@@ -1,1 +1,1 @@
-web: gunicorn hammersystems.wsgi --log-file - --log-level debug
+web: gunicorn hammersystems.wsgi --log-file -
