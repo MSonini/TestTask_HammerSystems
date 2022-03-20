@@ -5,4 +5,6 @@ django-phonenumber-field[phonenumberslite]
 django-sms==0.5.0
 psycopg2-binary==2.8.6
 drf-yasg==1.20.0
-python-dotenv 
+python-dotenv
+gunicorn
+django-heroku
