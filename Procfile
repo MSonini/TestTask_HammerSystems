@@ -1,1 +1,1 @@
-web: gunicorn hammersystems.wsgi
+web: gunicorn hammersystems.wsgi:hammersystems
