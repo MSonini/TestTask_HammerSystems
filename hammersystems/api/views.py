@@ -2,7 +2,6 @@ import string
 from secrets import randbelow, choice
 
 from django.contrib.auth import get_user_model
-from sms import send_sms
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
@@ -32,14 +31,12 @@ def get_confirmation_code(request):
     user, created = User.objects.update_or_create(
         phone_number=phone_number, defaults=defaults)
 
-    message = f'Confirmation code: {confirmation_code}'
-    send_sms(
-        message,
-        '+12345678900',
-        [phone_number],
-        fail_silently=False
-    )
-    return Response(serializer.data, status=status.HTTP_200_OK)
+    data = {
+        'phone_number': str(phone_number),
+        'confirmation_code': confirmation_code
+    }
+
+    return Response(data, status=status.HTTP_200_OK)
 
 
 class UserViewSet(viewsets.ModelViewSet):

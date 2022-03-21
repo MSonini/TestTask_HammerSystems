@@ -7,10 +7,10 @@ User = get_user_model()
 
 class PhoneNumberSerializer(serializers.Serializer):
     phone_number = PhoneNumberField(required=True)
+    confirmation_code = serializers.IntegerField(read_only=True)
 
 
-class ConfirmationCodeSerializer(serializers.Serializer):
-    phone_number = PhoneNumberField(required=True)
+class ConfirmationCodeSerializer(PhoneNumberSerializer):
     confirmation_code = serializers.IntegerField(required=True)
 
 
