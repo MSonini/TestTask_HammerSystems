@@ -29,7 +29,7 @@ urlpatterns = [
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Images API",
+      title="Hammer Systems Test API",
       default_version='v1',
       description="Документация к проекту.",
       contact=openapi.Contact(email="mishasonin@mail.ru"),
