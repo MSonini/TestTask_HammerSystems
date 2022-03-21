@@ -1,1 +1,1 @@
-web: gunicorn hammersystems.wsgi:hammersystems --log-file -
+web: gunicorn hammersystems.hammersystems.wsgi --log-file -
