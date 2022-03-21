@@ -32,6 +32,8 @@
 ### Технологии
  - Python 3.9
  - Django 2.2.19
+ - Django Rest Framework 3.12.4
+ - Django-phonenumber-field
 ### Запуск в Dev-режиме
 1. Установить зависимости из файла requirements.txt:
 
